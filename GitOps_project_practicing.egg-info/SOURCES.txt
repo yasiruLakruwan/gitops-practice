@@ -1,0 +1,14 @@
+setup.py
+GitOps_project_practicing.egg-info/PKG-INFO
+GitOps_project_practicing.egg-info/SOURCES.txt
+GitOps_project_practicing.egg-info/dependency_links.txt
+GitOps_project_practicing.egg-info/requires.txt
+GitOps_project_practicing.egg-info/top_level.txt
+pipeline/__init__.py
+pipeline/training_pipeline.py
+src/__init__.py
+src/custom_exeption.py
+src/data_processor.py
+src/logger.py
+src/model_trainer.py
+static/__init__.py
