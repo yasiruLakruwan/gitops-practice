@@ -1,4 +1,14 @@
-Metadata-Version: 2.1
+Metadata-Version: 2.4
 Name: GitOps-project-practicing
 Version: 0.0.1
 Author: Yapa
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Requires-Dist: flask
+Requires-Dist: joblib
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: mlflow
+Dynamic: author
+Dynamic: requires-dist

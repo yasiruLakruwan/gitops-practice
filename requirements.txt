@@ -1,5 +1,5 @@
 pandas
-x
+numpy
 scikit-learn
 flask
 joblib
