@@ -9,7 +9,10 @@ pipeline {
         }        
         stage('Build Docker Image') {
             steps {
-                echo 'Building Docker image...'
+                script{
+                    echo 'Building Docker image...'
+                    
+                }
             }
         }
         stage('Push Image to DockerHub') {
