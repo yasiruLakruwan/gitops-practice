@@ -29,7 +29,7 @@ pipeline {
                 }
             }
         }
-        stage('Install Kubectl & ArgoCD CLI') {
+        stage('Install Kubectl & ArgoCD CLI setups in jenkins') {
             steps {
                 sh '''
                 echo 'installing Kubectl & ArgoCD cli...'
@@ -41,7 +41,7 @@ pipeline {
                 '''
             }
         }
-        stage('Apply Kubernetes & Sync App with ArgoCD') {
+        stage('Apply Kubernetes & Sync App with ArgoCD ') {
             steps {
                 script {
                     kubeconfig(credentialsId: 'kubeconfig', serverUrl: 'https://192.168.49.2:8443') {
