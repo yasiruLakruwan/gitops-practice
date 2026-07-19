@@ -7,6 +7,6 @@ setup(
     name="GitOps project practicing",
     version="0.0.1",
     author="Yapa",
-    install_requires=requirements,   
+    install_requires=requirements, 
     packages=find_packages()
 )
