@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    environment {
+        REPOSITORY ="yasiruy/gitops-app"
+        DOCKER_CREDENTIAL_ID = "dockerhub-token"
+    }
     stages {
         stage('Checkout Github') {
             steps {
@@ -9,15 +13,20 @@ pipeline {
         }        
         stage('Build Docker Image') {
             steps {
-                script{
+                script {
                     echo 'Building Docker image...'
-                    
+                    dockerImage = docker.build("${REPOSITORY}:latest")
                 }
             }
         }
         stage('Push Image to DockerHub') {
             steps {
-                echo 'Pushing Docker image to DockerHub...'
+                script {
+                    echo 'Pushing Docker image to DockerHub...'
+                    docker.withRegistry('https://registry.hub.docker.com' , "${DOCKER_CREDENTIAL_ID}"){
+                        dockerImage.push('latest')
+                    }
+                }
             }
         }
         stage('Install Kubectl & ArgoCD CLI') {
